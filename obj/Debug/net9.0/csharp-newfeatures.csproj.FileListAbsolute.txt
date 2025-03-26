@@ -1,0 +1,15 @@
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\bin\Debug\net9.0\csharp-newfeatures.exe
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\bin\Debug\net9.0\csharp-newfeatures.deps.json
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\bin\Debug\net9.0\csharp-newfeatures.runtimeconfig.json
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\bin\Debug\net9.0\csharp-newfeatures.dll
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\bin\Debug\net9.0\csharp-newfeatures.pdb
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\csharp-newfeatures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\csharp-newfeatures.AssemblyInfoInputs.cache
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\csharp-newfeatures.AssemblyInfo.cs
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\csharp-newfeatures.csproj.CoreCompileInputs.cache
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\csharp-newfeatures.sourcelink.json
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\csharp-newfeatures.dll
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\refint\csharp-newfeatures.dll
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\csharp-newfeatures.pdb
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\csharp-newfeatures.genruntimeconfig.cache
+C:\Users\drham\OneDrive\Bureau\MyProjects\csharp-newfeatures\obj\Debug\net9.0\ref\csharp-newfeatures.dll

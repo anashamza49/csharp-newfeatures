@@ -8,23 +8,23 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ahamzaoui\\.nuget\\packages\\": {},
+    "C:\\Users\\drham\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahamzaoui\\Desktop\\proj\\csharp-newfeatures\\csharp-newfeatures\\csharp-newfeatures.csproj",
+      "projectUniqueName": "C:\\Users\\drham\\OneDrive\\Bureau\\MyProjects\\csharp-newfeatures\\csharp-newfeatures.csproj",
       "projectName": "csharp-newfeatures",
-      "projectPath": "C:\\Users\\ahamzaoui\\Desktop\\proj\\csharp-newfeatures\\csharp-newfeatures\\csharp-newfeatures.csproj",
-      "packagesPath": "C:\\Users\\ahamzaoui\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahamzaoui\\Desktop\\proj\\csharp-newfeatures\\csharp-newfeatures\\obj\\",
+      "projectPath": "C:\\Users\\drham\\OneDrive\\Bureau\\MyProjects\\csharp-newfeatures\\csharp-newfeatures.csproj",
+      "packagesPath": "C:\\Users\\drham\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\drham\\OneDrive\\Bureau\\MyProjects\\csharp-newfeatures\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ahamzaoui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\drham\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
