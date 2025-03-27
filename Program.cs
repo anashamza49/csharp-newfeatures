@@ -1,10 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using CollectionExpression;
 using ImprovedMethods;
 using ListPatt;
 using PatternMatch;
 using Pointers;
+using PrimaryConstructors;
 using RawStringLaterals;
 using StringInter;
+using RefReadOnly;
+using DefaultLambda;
+using AliasAnyType;
+using InlineArrays;
+using InlineArraysDemo;
 
 class Program
 {
@@ -29,7 +36,7 @@ class Program
         ptr.PrintAddresses();
         Console.WriteLine();
 
-        //String Interpolation
+        // String Interpolation
         StringInterpolation str = new StringInterpolation();
         str.Example();
         Console.WriteLine();
@@ -49,6 +56,8 @@ class Program
 
         // Raw string literals
         MyRawString.RawString();
+        Console.WriteLine();
+
 
         // Auto-default struct
         Vector3 vector3 = new Vector3(1, 2);
@@ -59,8 +68,38 @@ class Program
 
         // Pattern matching on Spans
         PattMatch.MatchSpan();
-        
+        Console.WriteLine();
+
+
+        // Extended nameof scope
+        Employee employee = new Employee();
+        Console.WriteLine(employee.GetStartTime());
+        Console.WriteLine();
+
+
+        // Collection expressions
+        CollExpr.PrintResult();
+        Console.WriteLine();
+
+        // Ref readonly structs
+        LargeStruct myStruct = new LargeStruct { Value1 = 1, Value2 = 2, Value3 = 3 };
+        myStruct.Display(ref myStruct);
+        Console.WriteLine();
+
+        // Default lambda parameters
+        DefaultLambdaParameters.DefaultLambda();
+        Console.WriteLine();
+
+        // Alias Any Type
+        AliasExample.ShowExample();
+        Console.WriteLine();
+
+        // Inline Array
+        ExempleInlineArrays exemple = new ExempleInlineArrays();
+        exemple.AfficherTableau();
 
     }
 }
+
+ 
 

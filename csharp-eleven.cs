@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 
 /// <summary>
@@ -326,10 +327,54 @@ namespace PatternMatch{
 /// </descrption>
 ///
 
+[AttributeUsage(AttributeTargets.All)]
+public class DescriptionAttribute : Attribute
+{
+    public string Text { get; }
+    public DescriptionAttribute(string text) => Text = text;
+}
+// in C# 10
+public class MyClass
+{
+   // [Description('myParam')] // Cannot use nameof :(
+   public void MyMethod(string myParam)
+   {
+       var nameOfClass = nameof(MyClass);
+       var nameOfMethod = nameof(MyMethod);
+       var nameOfParam = nameof(myParam);
+   }
+}
+// now
+public class MyClass1
+{
+   [Description(nameof(myParam))] // It works!
+   public void MyMethod(string myParam)
+   {
+       [Description(nameof(TGeneric))]
+       void LocalFunction<TGeneric>(TGeneric param) { }
 
+       var lambda = ([Description(nameof (parameter))] string parameter) => 
+          Console.WriteLine(parameter);
+   }
+}
 
+/******************************************************************************/
+/// <summary>
+/// Inline arrays
+/// </summary>
+/// <description>
+/// 
+/// </descrption>
+///
 
+public struct Buffer
+{
+    [InlineArray(10)]  // Déclaration d'un tableau inline de taille 10
+    private int _element0;
 
+    // Accesseur pour accéder aux éléments du tableau inline
+    public ref int this[int index] => ref _element0 + index;
+}
 
 
 
