@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using ImprovedMethods;
 using ListPatt;
+using PatternMatch;
 using Pointers;
+using RawStringLaterals;
 using StringInter;
 
 class Program
@@ -43,6 +45,21 @@ class Program
         method.SumMethodGroup();
          int x = 60;
         Console.WriteLine(Improve.Filter(x));
+        Console.WriteLine();
+
+        // Raw string literals
+        MyRawString.RawString();
+
+        // Auto-default struct
+        Vector3 vector3 = new Vector3(1, 2);
+        Console.WriteLine(vector3);
+        Console.WriteLine();
+
+        /* Vector vector = new Vector(3, 4, 5); */
+
+        // Pattern matching on Spans
+        PattMatch.MatchSpan();
+        
 
     }
 }

@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 
 /// <summary>
 /// Generic attributes
@@ -169,6 +171,7 @@ namespace ListPatt {
             }
     }
 }
+
 /******************************************************************************/
 
 /// <summary>
@@ -203,6 +206,125 @@ namespace ImprovedMethods{
     }
 
 }
+
+/******************************************************************************/
+
+/// <summary>
+/// Raw string literals
+/// </summary>
+/// <description>
+/// If we start and end our string with at least 3 (three) double quotes, we get a raw string literal.
+/// </descrption>
+/// 
+
+namespace RawStringLaterals{
+
+    public class MyRawString{
+        public static void RawString(){
+
+        string myRawLiteral = """I want to have "quotes" in the text""";
+
+        string myString = "SQLI Degital Experience";
+        // Use $""" for verbatim interpolation with quotes
+        string myRawVerbatim = $"""I want to have "quotes" in the text {myString}""";
+
+        // Escaping raw string literal: Use more quotes or an extra $ to include {, }, or """.
+        string myThreeQuotest = """"I want a tripple """ quote without escaping"""";
+
+        Console.WriteLine(myRawLiteral);
+        Console.WriteLine(myString);
+        Console.WriteLine(myThreeQuotest);
+    }
+    }
+}
+
+/******************************************************************************/
+
+/// <summary>
+/// Auto-default struct
+/// </summary>
+/// <description>
+/// C# 10 error: Field 'Z' must be assigned if commented out.
+/// </descrption>
+/// 
+/// Consider the following , Before C# 11.0:
+public struct Vector3
+{
+    public int X;
+    public int Y;
+    public int Z;
+
+    public Vector3(int x, int y)
+    {
+        X = x;
+        Y = y;
+        //Z = z;
+    }
+}
+// Now we can leave it as is
+
+public struct Vector
+{
+    public int X;
+    public int Y;
+    public int Z;
+
+    public Vector()
+    {
+    }
+}
+
+/******************************************************************************/
+
+/// <summary>
+/// Pattern match Span<char> or ReadOnlySpan<char> on a constant string
+/// </summary>
+/// <description>
+/// Pattern matching now supports Spans and constants
+/// </descrption>
+/// 
+
+namespace PatternMatch{
+
+    public class PattMatch{
+
+        public static void MatchSpan()
+        {
+
+        ReadOnlySpan<char> name = "Tomasz Juszczak";
+
+        if (name is "Tomasz Juszczak")
+        {
+            Console.WriteLine("Yes it was");
+        }
+
+        ReadOnlySpan<char> name1 = "Tomasz Juszczak";
+
+        if (name is ['T', ..])
+        {
+            Console.WriteLine("Name starts with T");
+        }
+
+        ReadOnlySpan<char> name2 = "Tomasz Juszczak";
+
+        if (name is ['T' or 'A', .. var rest])
+        {
+            Console.WriteLine($"Name starts with T or A and the remaining characters are {rest}");
+        }
+}
+}
+}
+
+/******************************************************************************/
+
+/// <summary>
+/// Extended nameof scope
+/// </summary>
+/// <description>
+/// Before C# 11, nameof could only be used after declaration
+/// Now, we can also put those nameof before declaration on certain elements
+/// </descrption>
+///
 
 
 
