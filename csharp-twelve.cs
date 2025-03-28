@@ -1,4 +1,6 @@
 using System.Runtime.CompilerServices;
+using System.Diagnostics.CodeAnalysis;
+
 
 /// <summary>
 /// Primary Constructros
@@ -166,7 +168,7 @@ namespace AliasAnyTypeX
 /// </description>  
 /// 
 
-[InlineArray(4)] // Defines an inline array of 4 integers
+[InlineArray(4)]
 struct IntInlineArray
 {
     private int _value; // Compiler expands this into an [inline array storage] !!!important 
@@ -180,22 +182,31 @@ struct MyStruct
 /******************************************************************************/   
 
 /// <summary>  
-/// Inline arrays  
+/// Experimental attribute 
 /// </summary>  
 /// <description>  
-/// Inline arrays enable a developer to create an array of fixed size in a struct type
+/// Types, methods, or assemblies can be marked with the System.Diagnostics.CodeAnalysis.ExperimentalAttribute to indicate an experimental feature.
 /// </description>  
 /// 
+namespace DotNet8Examples
+{
+    [Experimental(diagnosticId: "Test001")]
+    public static class ExperimentalAttributeDemo
+    {
+        public static void Print()
+        {
+            Console.WriteLine("Hello Experimental Attribute");
+        }
+    }
+}
 
+// interceptors r under preview !! can't work
 
-
-// namespace MyInterceptors
-// {
 // public static class MyInterceptor
 // {
 //     [InterceptsLocation(@"C:\Users\drham\OneDrive\Bureau\csharp-newfeatures\Program.cs", line: 7, character: 27)]
 //     public static string InterceptGetMessage()
 //     {
 //         return "Message intercepté !";
-//     }
-// }}
+//      }
+// }

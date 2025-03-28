@@ -19,6 +19,7 @@ using ImplicitSpanConversions;
 using UnboundGenericNameof;
 using LambdaParameterModifiers;
 using PartialMembersExample;
+using DotNet8Examples;
 
 unsafe class Program
 {
@@ -143,6 +144,13 @@ unsafe class Program
             Console.WriteLine($"Memory Address of Numbers[0]: {(long)p:X}");
         }
         Console.WriteLine();
+
+        // Experimental Attribute
+        #pragma warning disable Test001
+        ExperimentalAttributeDemo.Print();
+        Console.WriteLine();
+
+        //
 
         
 
