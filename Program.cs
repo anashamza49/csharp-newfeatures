@@ -28,7 +28,7 @@ unsafe class Program
 
     // Delegate for Group Method
     delegate string MyDelegate(int value);
-    static void Main(string[] args)
+    static async void Main(string[] args)
     {
         // Generic attributes
         Console.WriteLine("=== Generic attributes ===");
@@ -231,16 +231,28 @@ unsafe class Program
 
 
         // More partial members
+        Console.WriteLine("===  More partial members===");
         C c = new C();
 
         c.Name = "Anass";
         Console.WriteLine("Name: " + c.Name);
 
         // The field keyword
-
+        Console.WriteLine("=== The field keyword ===");
         PersonField person1 = new PersonField();
         person1.Name = "Anass";
         Console.WriteLine(person1.Name);
+
+        // ref and unsafe in iterators and async methods
+        Console.WriteLine("===  ref and unsafe in iterators and async methods===");
+
+        Programa.ExampleAsync();
+
+        // Iterating through the iterator method
+        foreach (var item in Programa.ExampleIterator())
+        {
+            Console.WriteLine($"Iterator yielded: {item}");
+        }
 
 
 /***********************************************************************************/

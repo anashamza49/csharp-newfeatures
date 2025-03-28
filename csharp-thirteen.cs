@@ -224,6 +224,44 @@ public partial class C
 /******************************************************************************/
 
 /// <summary>
+/// ref and unsafe in iterators and async methods
+/// </summary>
+/// <description>
+/// enable ref struct types to use new constructs
+/// </descrption>
+/// <remarks>
+/// You won't use these unless you write your own ref struct types
+/// </remarks>
+/// 
+class Programa
+{
+    // Async method that uses ref local variable
+    public static async Task ExampleAsync()
+    {
+        ref int refValue = ref GetRefValue();
+        
+        refValue = 42;
+
+        Console.WriteLine($"Ref value after async operation: {refValue}");
+    }
+
+    // Iterator method without unsafe code but still demonstrates iteration
+    public static IEnumerable<int> ExampleIterator()
+    {
+        int localValue = 10;
+        yield return localValue;
+    }
+
+    private static int value = 0; 
+    public static ref int GetRefValue()
+    {
+        return ref value; 
+    }
+}
+
+/******************************************************************************/
+
+/// <summary>
 /// The field keyword
 /// </summary>
 /// <description>
