@@ -245,7 +245,7 @@ unsafe class Program
 
         // ref and unsafe in iterators and async methods
         Console.WriteLine("===  ref and unsafe in iterators and async methods===");
-        
+
         Programa.ExampleAsync();
 
         foreach (var item in Programa.ExampleIterator())
@@ -262,13 +262,9 @@ unsafe class Program
         Console.WriteLine("=== The field keyword ===");
         FieldKeyword example = new FieldKeyword();
         Console.WriteLine();
-
-        // Assigning a valid value to Message
         example.Message = "Hello, World!";
         Console.WriteLine($"Message: {example.Message}");
         Console.WriteLine();
-
-        // Assigning a valid number
         example.Number = 10;
         Console.WriteLine($"Number: {example.Number}");
         // Testing an invalid value for Number (will throw an exception)
@@ -308,7 +304,6 @@ unsafe class Program
         eventExample.Trigger();
         eventExample.RemoveEventHandler(OnEventTriggered);
         eventExample.Trigger();
-
 
     }
 }
