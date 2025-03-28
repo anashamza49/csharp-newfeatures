@@ -16,8 +16,11 @@ using MethodGroup;
 using ImplicitIndexAccess;
 using FieldKeywordExample;
 using ImplicitSpanConversions;
+<<<<<<< HEAD
 using UnboundGenericNameof;
 using LambdaParameterModifiers;
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
 
 class Program
 {
@@ -93,7 +96,10 @@ class Program
         // C# 12
 
         // Primary Constructros
+<<<<<<< HEAD
         Console.WriteLine("=== Primary Constructros ===");
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
         Employee employee = new Employee();
         Console.WriteLine(employee.GetStartTime());
         Console.WriteLine();
@@ -124,7 +130,10 @@ class Program
         // C# 13
 
         // params Collections
+<<<<<<< HEAD
         Console.WriteLine("=== params Collections ===");
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
 
         // Example with int
         Params.Concat(1, 2, 3, 4, 5);
@@ -141,7 +150,10 @@ class Program
 /**/
 
         // New lock object
+<<<<<<< HEAD
         Console.WriteLine("=== New lock object ===");
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
         Account account = new Account();
         
         account.Deposit(50);
@@ -152,20 +164,29 @@ class Program
 
 
         // New escape sequence
+<<<<<<< HEAD
         Console.WriteLine("=== New escape sequence ===");
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
         NewEscape.PrintNewEscape();
         Console.WriteLine();
 
 
         // Method Group Natural Type Improvements
+<<<<<<< HEAD
         Console.WriteLine("=== Method Group Natural Type Improvements ===");
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
         MyDelegate del = NaturalGroupMethod.TransformValue; // Method group conversion
         Console.WriteLine("Method Group Result: " + del(10));
         Console.WriteLine();
 
 
         // Implicit index access
+<<<<<<< HEAD
         Console.WriteLine("=== Implicit index access ===");
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
         var countdown = new TimerRemaining();
 
             countdown.buffer[^1] = 0;
@@ -194,7 +215,11 @@ class Program
     // C# 14
 
         /// The field keyword
+<<<<<<< HEAD
         Console.WriteLine("=== The field keyword ===");
+=======
+        /// 
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
         FieldKeyword example = new FieldKeyword();
 
         // Assigning a valid value to Message
@@ -214,6 +239,7 @@ class Program
         SpanExamples.PrintSpan();
         Console.WriteLine();
 
+<<<<<<< HEAD
 /**/
 
         // Unbound Generic Types and nameof
@@ -226,6 +252,8 @@ class Program
         Console.WriteLine("=== Simple Lambda Parameters with Modifiers  ===");
         LambdaModifiersExample.DemonstrateLambdaModifiers();
 
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
 
     }
 }

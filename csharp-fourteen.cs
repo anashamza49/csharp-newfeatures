@@ -73,6 +73,7 @@ namespace ImplicitSpanConversions
     }
 }
 
+<<<<<<< HEAD
 /******************************************************************************/ 
 
 /// <summary> 
@@ -135,3 +136,5 @@ namespace LambdaParameterModifiers
 }
 
 
+=======
+>>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd
