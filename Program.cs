@@ -221,6 +221,13 @@ unsafe class Program
         }
         Console.WriteLine();
 
+        // Allowing Ref Structs
+        Console.WriteLine("=== Allowing Ref Structs ===");
+        MyRefStruct myStruct2 = new MyRefStruct(42);
+        Container<MyRefStruct> container = new Container<MyRefStruct>();
+        container.Show();
+        Console.WriteLine();
+
 
 /***********************************************************************************/
  

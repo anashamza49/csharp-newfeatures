@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;  // required for Unsafe methods
+
 /// <summary>
 /// params collections
 /// </summary>
@@ -120,5 +122,46 @@ namespace ImplicitIndexAccess
     public class TimerRemaining
     {
         public int[] buffer { get; set; } = new int[10];
+    }
+}
+
+/******************************************************************************/
+
+/// <summary>
+/// Allowing Ref Structs
+/// </summary>
+/// <description>
+/// developers can now specify that a type argument for a generic type or method can be a ref struct
+/// </descrption>
+/// 
+
+public struct MyRefStruct
+{
+    public int Value;
+
+    public MyRefStruct(int value)
+    {
+        Value = value;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Value: {Value}");
+    }
+}
+
+public ref struct Container<T> where T : struct
+{
+    private T _item;
+
+    public void Show()
+    {
+        Console.WriteLine("Container holds:");
+        if (typeof(T) == typeof(MyRefStruct))
+        {
+            // Unsafe is used to access the ref struct
+            ref MyRefStruct myRefStruct = ref Unsafe.As<T, MyRefStruct>(ref _item);
+            myRefStruct.Display();
+        }
     }
 }
