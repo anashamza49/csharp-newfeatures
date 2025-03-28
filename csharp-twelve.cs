@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 /// <summary>
 /// Primary Constructros
 /// </summary>
@@ -164,17 +166,26 @@ namespace AliasAnyTypeX
 /// </description>  
 /// 
 
-namespace InlineArrays
+[InlineArray(4)] // Defines an inline array of 4 integers
+struct IntInlineArray
 {
-    [System.Runtime.CompilerServices.InlineArray(10)]
-    public struct Buffer
-    {
-        public int _element0;
-    }
+    private int _value; // Compiler expands this into an [inline array storage] !!!important 
 }
 
-/******************************************************************************/  
+struct MyStruct
+{
+    public IntInlineArray Numbers; // Stores 4 integers directly inside MyStruct !!!important 
+}
 
+/******************************************************************************/   
+
+/// <summary>  
+/// Inline arrays  
+/// </summary>  
+/// <description>  
+/// Inline arrays enable a developer to create an array of fixed size in a struct type
+/// </description>  
+/// 
 
 
 

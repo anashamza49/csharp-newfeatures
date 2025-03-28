@@ -20,8 +20,11 @@ using UnboundGenericNameof;
 using LambdaParameterModifiers;
 using PartialMembersExample;
 
-class Program
+unsafe class Program
 {
+
+    //C# 11 features
+
     // Delegate for Group Method
     delegate string MyDelegate(int value);
     static void Main(string[] args)
@@ -65,8 +68,8 @@ class Program
         Improve method = new Improve();
         method.Sum();
         method.SumMethodGroup();
-         int x = 60;
-        Console.WriteLine(Improve.Filter(x));
+        int number = 60;
+        Console.WriteLine(Improve.Filter(number));
         Console.WriteLine();
 
         // Raw string literals
@@ -91,7 +94,7 @@ class Program
 
 /***********************************************************************************/
         
-        // C# 12
+        // C# 12 features
 
         // Primary Constructros
         Console.WriteLine("=== Primary Constructros ===");
@@ -120,20 +123,43 @@ class Program
         AliasExample.ShowExample();
         Console.WriteLine();
 
-/***********************************************************************************/
 
+        // Inline arrays
+        Console.WriteLine("=== Inline arrays ===");
+        MyStruct myStructX = new MyStruct();
+        
+        // Assign values
+        myStructX.Numbers[0] = 10;
+        myStructX.Numbers[1] = 20;
+        myStructX.Numbers[2] = 30;
+        myStructX.Numbers[3] = 40;
+        
+        // Print values
+        Console.WriteLine($"InlineArray values: {myStructX.Numbers[0]}, {myStructX.Numbers[1]}, {myStructX.Numbers[2]}, {myStructX.Numbers[3]}");
+
+        // Print memory addresses (to show values are inline)
+        int* p = &myStructX.Numbers[0];
+        {
+            Console.WriteLine($"Memory Address of Numbers[0]: {(long)p:X}");
+        }
+        Console.WriteLine();
+
+        
+
+
+
+/***********************************************************************************/
+        Console.WriteLine("\n $$$ C# 13 Features $$$ ");
         // C# 13
 
         // params Collections
-        Console.WriteLine("=== params Collections ===");
+        Console.WriteLine("\n=== params Collections ===\n");
 
         // Example with int
         Params.Concat(1, 2, 3, 4, 5);
-        Console.WriteLine();
 
         // Example with string
         Params.Concat("Bonjour", "le", "monde");
-        Console.WriteLine();
 
         // Example with table
         int[] numbers = [10, 20, 30];
