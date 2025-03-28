@@ -73,7 +73,6 @@ namespace ImplicitSpanConversions
     }
 }
 
-<<<<<<< HEAD
 /******************************************************************************/ 
 
 /// <summary> 
@@ -123,7 +122,7 @@ namespace LambdaParameterModifiers
     {
         public static void DemonstrateLambdaModifiers()
         {
-            TryParse<int> parse = (text, out result) => int.TryParse(text, out result);
+            TryParse<int> parse = (string text, out int result) => int.TryParse(text, out result);
 
             if (parse("123", out int number))
                 Console.WriteLine($"Parsed: {number}");
@@ -134,7 +133,3 @@ namespace LambdaParameterModifiers
 
     public delegate bool TryParse<T>(string text, out T result);
 }
-
-
-=======
->>>>>>> 346feada19e845f2ac2fcb26bee06df98880c8cd

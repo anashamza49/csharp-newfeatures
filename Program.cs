@@ -184,6 +184,7 @@ class Program
         {
             Console.WriteLine($"buffer[{i}] = {countdown.buffer[i]}");
         }
+        Console.WriteLine();
 
 
 
@@ -196,16 +197,19 @@ class Program
         /// The field keyword
         Console.WriteLine("=== The field keyword ===");
         FieldKeyword example = new FieldKeyword();
+        Console.WriteLine();
 
         // Assigning a valid value to Message
         example.Message = "Hello, World!";
         Console.WriteLine($"Message: {example.Message}");
+        Console.WriteLine();
 
         // Assigning a valid number
         example.Number = 10;
         Console.WriteLine($"Number: {example.Number}");
         // Testing an invalid value for Number (will throw an exception)
         // example.Number = -5;
+        Console.WriteLine();
 
 /**/
 
@@ -219,12 +223,14 @@ class Program
         // Unbound Generic Types and nameof
         Console.WriteLine("=== Unbound Generic Types and nameof ===");
         UnboundGenericExample.PrintUnboundGenericName();
+        Console.WriteLine();
 
 /**/
 
         // Simple Lambda Parameters with Modifiers 
         Console.WriteLine("=== Simple Lambda Parameters with Modifiers  ===");
         LambdaModifiersExample.DemonstrateLambdaModifiers();
+        Console.WriteLine();
 
 
     }
