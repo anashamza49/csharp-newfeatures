@@ -27,9 +27,11 @@ unsafe class Program
     //C# 11 features
 
     // Delegate for Group Method
+    
     delegate string MyDelegate(int value);
-    static async void Main(string[] args)
+    static void Main(string[] args)
     {
+        Console.WriteLine("$$$ C# 11 features $$$\n");
         // Generic attributes
         Console.WriteLine("=== Generic attributes ===");
         Eleve eleve = new Eleve("Anas", 10);
@@ -98,6 +100,7 @@ unsafe class Program
         // C# 12 features
 
         // Primary Constructros
+        Console.WriteLine("\n $$$ C# 12 features $$$\n");
         Console.WriteLine("=== Primary Constructros ===");
         Employee employee = new Employee();
         Console.WriteLine(employee.GetStartTime());
