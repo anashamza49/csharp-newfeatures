@@ -133,3 +133,38 @@ namespace LambdaParameterModifiers
 
     public delegate bool TryParse<T>(string text, out T result);
 }
+
+/******************************************************************************/ 
+
+/// <summary> 
+/// More Partial Members 
+/// </summary> 
+/// <description> 
+/// now we can instance constructors and events to be declared as partial members. 
+/// </description> 
+/// 
+namespace PartialMembersExample
+{
+
+    // Partial constructor
+    public partial class Person(string name);
+
+    public partial class Person
+    {
+        public string Name { get; } = name ?? throw new ArgumentNullException(nameof(name));
+    }
+
+    // Partial event example
+    public partial class EventExample
+    {
+        public event EventHandler? OnEvent;
+        
+        public void Trigger() => OnEvent?.Invoke(this, EventArgs.Empty);
+    }
+
+    public partial class EventExample
+    {
+        public void AddEventHandler(EventHandler handler) => OnEvent += handler;
+        public void RemoveEventHandler(EventHandler handler) => OnEvent -= handler;
+    }
+}

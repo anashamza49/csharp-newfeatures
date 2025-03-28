@@ -18,6 +18,7 @@ using FieldKeywordExample;
 using ImplicitSpanConversions;
 using UnboundGenericNameof;
 using LambdaParameterModifiers;
+using PartialMembersExample;
 
 class Program
 {
@@ -187,9 +188,6 @@ class Program
         Console.WriteLine();
 
 
-
-
-
 /***********************************************************************************/
  
     // C# 14
@@ -232,6 +230,18 @@ class Program
         LambdaModifiersExample.DemonstrateLambdaModifiers();
         Console.WriteLine();
 
+/**/
+        // More partial members
+        Console.WriteLine("=== More partial members  ===");
+        static void OnEventTriggered(object sender, EventArgs e) => Console.WriteLine("Event triggered!");
+        var person = new Person("Anass HAMZAOUI");
+        Console.WriteLine(person.Name);
+
+        var eventExample = new EventExample();
+        eventExample.AddEventHandler(OnEventTriggered);
+        eventExample.Trigger();
+        eventExample.RemoveEventHandler(OnEventTriggered);
+        eventExample.Trigger();
 
     }
 }
