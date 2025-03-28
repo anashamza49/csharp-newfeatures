@@ -163,14 +163,9 @@ unsafe class Program
         // params Collections
         Console.WriteLine("\n=== params Collections ===\n");
 
-        // Example with int
-        Params.Concat(1, 2, 3, 4, 5);
-
-        // Example with string
-        Params.Concat("Bonjour", "le", "monde");
-
-        // Example with table
-        int[] numbers = [10, 20, 30];
+        Params.Concat(1, 2, 3, 4, 5); //using integers
+        Params.Concat("Bonjour", "le", "monde"); // string
+        int[] numbers = [10, 20, 30]; // table
         Params.Concat(numbers);
         Console.WriteLine();
 /**/
@@ -235,6 +230,19 @@ unsafe class Program
         MathHelper.Calculate(5.5); // Calls the double overload due to implicit conversion
 
 
+        // More partial members
+        C c = new C();
+
+        c.Name = "Anass";
+        Console.WriteLine("Name: " + c.Name);
+
+        // The field keyword
+
+        PersonField person1 = new PersonField();
+        person1.Name = "Anass";
+        Console.WriteLine(person1.Name);
+
+
 /***********************************************************************************/
  
     // C# 14
@@ -289,6 +297,7 @@ unsafe class Program
         eventExample.Trigger();
         eventExample.RemoveEventHandler(OnEventTriggered);
         eventExample.Trigger();
+
 
     }
 }

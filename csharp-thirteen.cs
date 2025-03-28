@@ -190,3 +190,56 @@ public class MathHelper
         Console.WriteLine("Integer overload called with value: " + number);
     }
 }
+
+
+/******************************************************************************/
+
+/// <summary>
+/// More partial members
+/// </summary>
+/// <description>
+///  You can declare partial properties and partial indexers
+/// </descrption>
+/// <remarks>
+///  can't use an auto-property declaration for implementing a partial property
+/// </remarks>
+
+public partial class C
+{
+    // Declaring declaration
+    public partial string Name { get; set; }
+}
+
+public partial class C
+{
+    // implementation declaration:
+    private string _name;
+    public partial string Name
+    {
+        get => _name;
+        set => _name = value;
+    }
+}
+
+/******************************************************************************/
+
+/// <summary>
+/// The field keyword
+/// </summary>
+/// <description>
+/// enables you to write an accessor body without declaring an explicit backing field in your type declaration
+/// </descrption>
+/// 
+
+public class PersonField
+{
+    private string _name;
+
+    public string Name
+    {
+        get => field;
+        set => field = value;
+    }
+
+    private string @field;
+}
