@@ -245,10 +245,9 @@ unsafe class Program
 
         // ref and unsafe in iterators and async methods
         Console.WriteLine("===  ref and unsafe in iterators and async methods===");
-
+        
         Programa.ExampleAsync();
 
-        // Iterating through the iterator method
         foreach (var item in Programa.ExampleIterator())
         {
             Console.WriteLine($"Iterator yielded: {item}");
