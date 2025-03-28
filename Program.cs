@@ -228,6 +228,12 @@ unsafe class Program
         container.Show();
         Console.WriteLine();
 
+        // Overload Resolution Priority Attribute
+        Console.WriteLine("=== Overload Resolution Priority Attribute ===");
+        MathHelper.Calculate(); // Calls the integer overload due to higher priority
+        MathHelper.Calculate(5); // Calls the integer overload
+        MathHelper.Calculate(5.5); // Calls the double overload due to implicit conversion
+
 
 /***********************************************************************************/
  

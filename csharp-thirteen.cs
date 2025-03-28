@@ -165,3 +165,28 @@ public ref struct Container<T> where T : struct
         }
     }
 }
+
+/******************************************************************************/
+
+/// <summary>
+/// Overload Resolution Priority Attribute
+/// </summary>
+/// <description>
+///  allows library authors to designate one overload as better than others, improving method resolution in complex scenarios
+/// </descrption>
+/// 
+
+public class MathHelper
+{
+    [OverloadResolutionPriority(1)]
+    public static void Calculate(double number = 20)
+    {
+        Console.WriteLine("Double overload called with value: " + number);
+    }
+
+    [OverloadResolutionPriority(2)]
+    public static void Calculate(int number = 10)
+    {
+        Console.WriteLine("Integer overload called with value: " + number);
+    }
+}
