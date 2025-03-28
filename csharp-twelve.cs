@@ -1,5 +1,3 @@
-
-
 /// <summary>
 /// Primary Constructros
 /// </summary>
@@ -138,7 +136,7 @@ namespace DefaultLambda{
 /// This feature allows creating aliases for any type (tuples, arrays, pointers)  
 /// </description>  
 
-namespace AliasAnyType
+namespace AliasAnyTypeX
 {
     using Age = int;
     using NameList = string[];
@@ -155,3 +153,38 @@ namespace AliasAnyType
         }
     }
 }
+
+/******************************************************************************/  
+
+/// <summary>  
+/// Inline arrays  
+/// </summary>  
+/// <description>  
+/// Inline arrays enable a developer to create an array of fixed size in a struct type
+/// </description>  
+/// 
+
+namespace InlineArrays
+{
+    [System.Runtime.CompilerServices.InlineArray(10)]
+    public struct Buffer
+    {
+        public int _element0;
+    }
+}
+
+/******************************************************************************/  
+
+
+
+
+// namespace MyInterceptors
+// {
+// public static class MyInterceptor
+// {
+//     [InterceptsLocation(@"C:\Users\drham\OneDrive\Bureau\csharp-newfeatures\Program.cs", line: 7, character: 27)]
+//     public static string InterceptGetMessage()
+//     {
+//         return "Message intercepté !";
+//     }
+// }}

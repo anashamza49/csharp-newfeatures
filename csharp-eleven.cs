@@ -1,6 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
-
 
 /// <summary>
 /// Generic attributes
@@ -357,25 +355,3 @@ public class MyClass1
           Console.WriteLine(parameter);
    }
 }
-
-/******************************************************************************/
-/// <summary>
-/// Inline arrays
-/// </summary>
-/// <description>
-/// 
-/// </descrption>
-///
-
-public struct Buffer
-{
-    [InlineArray(10)]  // Déclaration d'un tableau inline de taille 10
-    private int _element0;
-
-    // Accesseur pour accéder aux éléments du tableau inline
-    public ref int this[int index] => ref _element0 + index;
-}
-
-
-
-
